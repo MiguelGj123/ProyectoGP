@@ -1,0 +1,8 @@
+# Forzar LF en todos los archivos de código
+* text=auto eol=lf
+
+# Archivos binarios que no se quieren modificar
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary

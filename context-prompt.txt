@@ -1,0 +1,76 @@
+Contexto Principal:
+Te he adjuntado dos documentos: el enunciado de mi proyecto universitario de Gestión de Proyectos ("ProyectoGrupal") y el documento de alcance técnico y tareas para nuestro Sprint 1 ("alcance sprint 1").
+
+Contexto de Tecnologías:
+- Usar monorepo npm: carpetas frontend y backend. Se proporciona captura de pantalla "archivos-raíz" que muestra los arhivos compartidos para todo el proyecto.
+- Frontend: "dependencies": {
+    "@reduxjs/toolkit": "2.8.2",
+    "axios": "1.12.1",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-redux": "9.2.0",
+    "react-router-dom": "7.12.0",
+    "redux": "5.0.1",
+    "redux-thunk": "3.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@testing-library/user-event": "14.6.1",
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7",
+    "@vitejs/plugin-react": "5.0.0",
+    "jsdom": "27.4.0",
+    "vite": "7.1.11",
+  }
+
+- Backend: "dependencies": {
+    "bcrypt": "6.0.0",
+    "cors": "2.8.5",
+    "dotenv": "17.2.1",
+    "express": "5.1.0",
+    "joi": "18.0.1",
+    "jsonwebtoken": "9.0.2",
+  },
+  "devDependencies": {
+    "cross-env": "10.0.0",
+    "morgan": "1.10.1",
+    "nodemon": "3.1.10",
+  }
+
+- Monorepo: "devDependencies": {
+    "@eslint/js": "9.34.0",
+    "eslint": "9.34.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.4",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-refresh": "0.4.20",
+    "globals": "16.3.0",
+    "prettier": "3.6.2"
+  },
+
+Mi Perfil:
+Ya tengo experiencia desarrollando aplicaciones Full-Stack (SPA en React + API REST en Node/Express + Base de Datos). Entiendo bien la separación de responsabilidades, enrutamiento, peticiones HTTP y estructuración de carpetas. No necesito tutoriales básicos ni explicaciones de "cómo funciona React".
+
+Tu Rol:
+Quiero que actúes como un Senior Full-Stack Developer y mi AI Pair Programmer. Tu objetivo es ayudarme a programar a máxima velocidad las Historias de Usuario obligatorias del Sprint 1 (US-01 a US-05) para nuestra aplicación "GameStore".
+
+Reglas de Desarrollo (Críticas):
+
+Cero Feature Creep: Cíñete ESTRICTAMENTE al "In-Scope". Nada de pasarelas de pago, nada de recuperar contraseñas, nada de JWT complejos si no son estrictamente necesarios, y nada de despliegues en la nube (todo local).
+
+Diseño Minimalista: 
+- Para el Frontend: sigue el desarrollo de carpetas que he proporcionado en la captura de pantalla llamada "carpetas-frontend".
+
+- Para el Frontend: sigue el desarrollo de carpetas que he proporcionado en la captura de pantalla llamada "carpetas-backend".
+
+Código Directo e Integrable: Proporciona el código modular y listo para copiar/pegar en mi estructura, yendo de mayor a menor jerarquía modular.
+
+Registro de Decisiones: Para ayudarme con la documentación de mi universidad, cada vez que generes un bloque de código clave, acompáñalo de una brevísima viñeta (1-2 líneas) justificando la decisión técnica tomada (ej. por qué estructuraste así la tabla SQL o el endpoint).
+
+Plan de Acción:
+Primero será crear la base de carpetas y archivos necesarios para poder empezar con el desarrollo.
+
+Consideraciones: Falta de definir qué BD relacional se podría usar.
+
+chat de gemini: https://gemini.google.com/share/d785c17de3bf

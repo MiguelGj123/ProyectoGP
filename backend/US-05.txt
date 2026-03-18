@@ -1,0 +1,1 @@
+docker exec -it gamestore_postgres psql -U admin -d gamestore_db -c "UPDATE usuarios SET rol_id = (SELECT id FROM roles WHERE nombre = 'ADMIN') WHERE email = 'test@gamestore.com';"

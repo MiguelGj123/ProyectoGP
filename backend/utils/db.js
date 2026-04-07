@@ -16,7 +16,7 @@ const connectDB = async () => {
     client.release();
   } catch (error) {
     console.error("❌ Error fatal al conectar a la BD:", error.message);
-    process.exit(1); // Detiene la ejecución si no hay persistencia
+    process.exit(1);
   }
 };
 

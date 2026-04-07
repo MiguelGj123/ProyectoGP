@@ -1,21 +1,26 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import authService from "../services/authService";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../redux/reducers/authSlice";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const user = await authService.login({ email, password });
-      window.localStorage.setItem("gameStoreUser", JSON.stringify(user));
-      alert(`Bienvenido, ${user.email} (Rol: ${user.rol})`);
-      navigate("/catalogo"); // Redirección automática
+      // unwrap() nos permite usar try/catch con createAsyncThunk
+      const resultAction = await dispatch(
+        loginUser({ email, password }),
+      ).unwrap();
+
+      alert(`Bienvenido, ${resultAction.email} (Rol: ${resultAction.rol})`);
+      navigate("/catalogo");
     } catch (error) {
-      alert(error.response?.data?.error?.[0] || "Credenciales inválidas");
+      alert(error || "Credenciales inválidas");
     }
   };
 

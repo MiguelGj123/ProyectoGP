@@ -1,5 +1,6 @@
 const js = require("@eslint/js");
 const globals = require("globals");
+const react = require("eslint-plugin-react");
 const reactHooks = require("eslint-plugin-react-hooks");
 const reactRefresh = require("eslint-plugin-react-refresh");
 const prettier = require("eslint-plugin-prettier");
@@ -23,6 +24,7 @@ module.exports = [
   {
     files: ["frontend/src/**/*.{js,jsx}", "frontend/*.{js,jsx}"],
     plugins: {
+      react: react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       prettier: prettier,
@@ -37,14 +39,25 @@ module.exports = [
         ecmaFeatures: { jsx: true },
       },
     },
+    settings: {
+      react: { version: "detect" },
+    },
     rules: {
+      ...react.configs.recommended.rules, // 4. Reglas recomendadas de React
+      ...react.configs["jsx-runtime"].rules, // 5. Importante: evita errores de "React must be in scope" en versiones modernas
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
       ],
       "prettier/prettier": "error",
-      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^React$", // Ignora si React aparece como no usado
+        },
+      ],
     },
   },
 

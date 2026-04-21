@@ -6,3 +6,4 @@ build/
 .vscode/
 .dockerignore
 prototypes/
+repomix-output.*
